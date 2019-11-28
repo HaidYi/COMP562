@@ -1,0 +1,26 @@
+training:
+  batch_size: 64
+  max_iter: 40000
+  critic_iter: 5
+  minitor_iter: 50
+  save_iter: 100
+  use_gpu: 1
+  np_seed: 1234
+  torch_seed: 1234
+  log_dir: './log'
+  check_point: './checkpoint'
+
+data:
+  dataset: "cifar10"
+  image_size: 32
+  channels: 3
+
+model:
+  hidden_dim: 100
+  Lambda: 10.0
+
+optim:
+  lr: 0.0001
+  optimizer: "Adam"
+  beta1: 0.5
+  beta2: 0.999
