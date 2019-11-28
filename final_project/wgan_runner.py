@@ -187,24 +187,24 @@ class Wgan_runner():
 
 
     def sample(self, sample_size = 64):
-        states = torch.load(os.path.join(self.config.training.check_point, 'checkpoint.pth'), map_location=self.device)
+        states = torch.load(os.path.join(self.config.training.check_point, 'checkpoint.pth'), map_location='cpu')
         netG = Generator(self.config.data.channels)
 
-        netG = netG.load_state_dict(states[1])
+        netG.load_state_dict(states[1])
         netG.eval()
 
-        if not os.path.exists(args.image_folder):
-            os.makedirs(self.args.image_folder)
+        if not os.path.exists(self.args.image_path):
+            os.makedirs(self.args.image_path)
 
         z = torch.randn([sample_size,
                         self.config.model.hidden_dim,
                         1,
-                        1]).to(self.device)
+                        1])
         samples = netG(z)
-        samples = samples.mul(0.5).add(0.5).cpu()
+        samples = samples.mul(0.5).add(0.5)
         grid = utils.make_grid(samples)
         time_stamp = datetime.datetime.now().timestamp()
-        utils.save_image(grid, os.path.join(self.args.image_folder, 
+        utils.save_image(grid, os.path.join(self.args.image_path, 
                                             self.config.data.dataset,
                                             "generated_image_{}.png".format(
                                                 time_stamp
