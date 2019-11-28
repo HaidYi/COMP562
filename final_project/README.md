@@ -13,6 +13,7 @@
 
 
 ## Reference
+This repo partially referenced the implementation of W-GAN in this [repo](https://github.com/Zeleni9/pytorch-wgan).
 
 Arjovsky, Martin, Soumith Chintala, and Léon Bottou. "Wasserstein generative adversarial networks." International conference on machine learning. 2017.
 
