@@ -2,7 +2,8 @@
 Autohrs: Jingyuan Chen, Tenghao Huang, Jiyao Wang, Haidong Yi
 
 ## Abstract
-In this project, we reproduced the implementation of Wasserstein Generative Adversarial Network (WGAN) and trained it on several datasets for image generation purpose. The datasets include multi-class natural photos, human face images, and animation character images. Results are measured by Frechet Inception Distance (FID).
+In this project, we reproduced the implementation of Wasserstein Generative Adversarial Network (WGAN) and trained it on several datasets for image generation purpose. The datasets include multi-class natural photos, human face images, and animation character images. Results are measured by Frechet Inception Distance (FID).<br><br>
+To view the full text goes here: https://drive.google.com/file/d/1vzbOjq73wMTSdFHA90f-nJsxymxs5sAY/view
 ## Introduction
 Image generation is always a field of interest in machine learning. The Generative Adversarial Network (GAN) is proved to be an effective model in generating plausible fake images from training sets. Related work concerning this subject has introduced several variations of this model including DCGAN, CycleGAN, and WGAN. Our project aims at examining the power of WGAN in image generation, especially its application in generating human designed images.
 ## Methods
