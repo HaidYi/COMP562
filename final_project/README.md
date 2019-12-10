@@ -32,6 +32,8 @@ We experimented the network on three datasets: Cifar10, CelebA and the animation
 ## Reference
 This repo partially referenced the implementation of W-GAN in this [repo](https://github.com/Zeleni9/pytorch-wgan).
 
+Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David WardeFarley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. Generative adversarial nets. In Advances in Neural Information Processing Systems 27, pages 2672–2680. Curran Associates, Inc., 2014.
+
 Arjovsky, Martin, Soumith Chintala, and Léon Bottou. "Wasserstein generative adversarial networks." International conference on machine learning. 2017.
 
 Gulrajani, Ishaan, et al. "Improved training of wasserstein gans." Advances in neural information processing systems. 2017.
