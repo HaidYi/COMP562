@@ -8,7 +8,7 @@ Image generation is always a field of interest in machine learning. The Generati
 ## Methods
 A Generative Adversarial Network (GAN) is a deep learning generative model including a discriminator and a generator. The generator G tries to generate fake images to fool the discriminator while the discriminator D tries to classify fake and real images. <br>
 <br>
-In our implementation, the generator has a total of 4 deconvolutional layers implemented with transpose convolution, each has a filter size of 4 and stride of 2 except for the first. We added batch norm and ReLU layers after each layer except the last. The discriminator has a total of 4 convolutional layers, and we added instance norm and leaky ReLU layers after each except for the last. We use no fully connected layers and skip the log operation on the output.
+In our implementation, the generator has a total of 4 deconvolutional layers implemented with transpose convolution, each has a filter size of 4 and stride of 2 except for the first. We added batch norm and ReLU layers after each layer except the last. The discriminator has a total of 4 convolutional layers, and we added instance norm and leaky ReLU layers after each except for the last. We use no fully connected layers and skip the log operation on the output. Below is the illustration of our network structure:
 ![G](images/generator.png)
 ![D](images/discriminator.png)
 ## Dependencies 
