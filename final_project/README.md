@@ -1,4 +1,4 @@
-# The Implementation of Wasserstein-GAN using Pytorch (Final Project of COMP562)
+# General Purpose Image Generator by WGAN
 
 ## Dependencies 
 * numpy
