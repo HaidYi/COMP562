@@ -26,8 +26,33 @@ We experimented the network on three datasets: Cifar10, CelebA and the animation
 * tensorboardX
 
 ## Usage
+```{bash}
+usage: train.py [-h] [--config CONFIG] [--test TEST]
+                [--sample_size SAMPLE_SIZE] [--image_path IMAGE_PATH]
+                [--resume_training RESUME_TRAINING]
 
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG       path to the config file
+  --test TEST           whether to test the model.
+  --sample_size SAMPLE_SIZE
+                        number of images to generate.
+  --image_path IMAGE_PATH
+                        the path to the generated images.
+  --resume_training RESUME_TRAINING
+                        whether to resume training.
+```
 
+To train the model, users need to write the config file in `configs`. For example, to train the model on cifar10
+, the user can directly use the following command,
+```{bash}
+python train.py --config cifar.yml
+```
+After the training, users can use the arg `--test` to generated the images using the trained model with command
+```{bash}
+python train.py --test True --sample_size [SAMPLE_SIZE]
+```
+The pretrained model can be downloaded directly at [here](https://drive.google.com/drive/folders/1f7FWZWcvsNB4OzYUVnNBgBAjX63474VZ?usp=sharing)<br><br>
 
 ## Reference
 This repo partially referenced the implementation of W-GAN in this [repo](https://github.com/Zeleni9/pytorch-wgan).
