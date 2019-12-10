@@ -1,5 +1,5 @@
 # General Purpose Image Generator by WGAN
-Autohrs: Jingyuan Chen, Tenghao Huang, Jiyao Wang, Haidong Yi
+Authors: Jingyuan Chen, Tenghao Huang, Jiyao Wang, Haidong Yi
 
 ## Abstract
 In this project, we reproduced the implementation of Wasserstein Generative Adversarial Network (WGAN) and trained it on several datasets for image generation purpose. The datasets include multi-class natural photos, human face images, and animation character images. Results are measured by Frechet Inception Distance (FID).<br><br>
