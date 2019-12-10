@@ -11,6 +11,9 @@ A Generative Adversarial Network (GAN) is a deep learning generative model inclu
 In our implementation, the generator has a total of 4 deconvolutional layers implemented with transpose convolution, each has a filter size of 4 and stride of 2 except for the first. We added batch norm and ReLU layers after each layer except the last. The discriminator has a total of 4 convolutional layers, and we added instance norm and leaky ReLU layers after each except for the last. We use no fully connected layers and skip the log operation on the output. Below is the illustration of our network structure:
 ![G](images/generator.png)
 ![D](images/discriminator.png)
+## Results
+We used Frechet Inception Distance score (FID) as our metric for the ability of the network. The Frechet Inception Distance score (FID) is a measure that compares the feature vectors between two set of images. In its application to measure the performance of image generator, it is usually used to measure the distance between real and fake images. It is proposed as a replacement of inception score, which fails in capturing how synthetic images compare to real images. The calculation of FID uses inception-v3 model. The activations act as a multivariate Gaussian by calculating the mean and covariance of images. The statistics over real and fake image sets are later calculated. Generally speaking, lower score between two image sets indicate that the two groups are more similar. A 0.0 inception score indicates that the two image groups are statistically identical.<br>
+We trained the network on three datasets: Cifar10, CelebA and the animation dataset. 
 ## Dependencies 
 * numpy
 * pytorch (>=1.3)
